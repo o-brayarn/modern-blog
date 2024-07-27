@@ -7,7 +7,6 @@ function App() {
       <div className="App">
         <h1>Modern Blog</h1>
         <div id="page-body">
-          Welcome to my awesome blog
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
