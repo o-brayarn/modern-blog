@@ -1,10 +1,22 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
+import { About, Article, ArticlesList, Home } from "./pages";
 function App() {
   return (
-    <div className="App">
-      <h1>Modern Blog</h1>
-      <div id="page-body">Welcome to my awesome blog</div>
-    </div>
+    <Router>
+      <div className="App">
+        <h1>Modern Blog</h1>
+        <div id="page-body">
+          Welcome to my awesome blog
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/articles" element={<ArticlesList />} />
+            <Route path="/articles/:articleId" element={<Article />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
