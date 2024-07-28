@@ -1,8 +1,15 @@
-const ArticlesList = () => {
+import articles from "./article-content";
+const ArticlesList = ({ articleId }) => {
   return (
-    <div>
-      <h1>This is the articles list page</h1>
-    </div>
+    <>
+      <h1>Articles</h1>
+      {articles.map((article) => (
+        <div key={articleId}>
+          <h3>{article.title}</h3>
+          <p>{article.content[0].substring(0, 150)} </p>
+        </div>
+      ))}
+    </>
   );
 };
 
