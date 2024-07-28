@@ -7,8 +7,8 @@ const Article = () => {
   return (
     <>
       <h1>{article.title}</h1>
-      {article.content.map((paragraph) => (
-        <p key={articleId}>{paragraph}</p>
+      {article.content.map((paragraph, i) => (
+        <p key={i}>{paragraph}</p>
       ))}
     </>
   );
