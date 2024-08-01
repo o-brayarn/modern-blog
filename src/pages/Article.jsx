@@ -26,7 +26,7 @@ const Article = () => {
   const article = articles.find((article) => article.name === articleId);
 
   const addUpvote = async () => {
-    const response = await axios.put(`/api/articles/${articleId}/upvotes`);
+    const response = await axios.put(`/api/articles/${articleId}/upvote`);
     const updatedArticle = response.data;
     setArticleInfo(updatedArticle);
   };
