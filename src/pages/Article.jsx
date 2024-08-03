@@ -27,7 +27,7 @@ const Article = () => {
       const newArticleInfo = response.data;
       setArticleInfo(newArticleInfo);
     };
-    if (isLoading) {
+    if (!isLoading) {
       loadArticleInfo();
     }
   }, [isLoading, user]);
